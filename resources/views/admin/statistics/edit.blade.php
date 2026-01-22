@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Edit Statistics') }}
+            {{ __('Ubah Statistik') }}
         </h2>
     </x-slot>
 
@@ -21,7 +21,7 @@
                     @csrf
                     @method('PUT')
                     <div>
-                        <x-input-label for="name" :value="__('Name')" />
+                        <x-input-label for="name" :value="__('Nama')" />
                         <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" value="{{ $statistic->name }}" required autofocus autocomplete="name" />
                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
@@ -42,7 +42,7 @@
                     <div class="flex items-center justify-end mt-4">
             
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                            Update Statistic
+                            Perbarui Statistik
                         </button>
                     </div>
                 </form>

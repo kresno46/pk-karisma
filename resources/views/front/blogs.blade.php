@@ -15,7 +15,7 @@
                     <p class="text-cp-light-grey last-of-type:text-cp-black last-of-type:font-semibold">Blog</p>
                 </div>
                 <h2 class="font-bold text-4xl leading-[45px] text-center">
-                    Artikel & Insight <br />
+                    Artikel & Wawasan <br />
                     Seputar Kayu dan Industri
                 </h2>
             </div>
@@ -34,9 +34,9 @@
                     <div class="p-[20px] flex flex-col gap-3">
                         <div class="flex items-center justify-between gap-3">
                             @if($blog->published_at)
-                                <p class="text-sm text-cp-light-grey">{{ $blog->published_at->format('d M Y') }}</p>
+                                <p class="text-sm text-cp-light-grey">{{ $blog->published_at->format('d/m/Y') }}</p>
                             @else
-                                <p class="text-sm text-cp-light-grey">Draft</p>
+                                <p class="text-sm text-cp-light-grey">Draf</p>
                             @endif
                             <p class="text-sm text-cp-light-grey">Blog</p>
                         </div>
@@ -48,7 +48,7 @@
                     </div>
                 </a>
             @empty
-                <p>{{ __('No data yet') }}</p>
+                <p>{{ __('Belum ada data') }}</p>
             @endforelse
         </div>
 

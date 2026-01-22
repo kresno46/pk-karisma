@@ -38,7 +38,7 @@
                 </div>
             </div>
         @empty
-            <p>{{ __('No data yet') }}</p>
+            <p>{{ __('Belum ada data') }}</p>
         @endforelse
     </div>
 

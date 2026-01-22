@@ -1,6 +1,6 @@
 @extends('front.layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Beranda')
 
 @section('content')
     <div id="header" class="bg-[#F6F7FA] relative overflow-hidden">
@@ -23,12 +23,12 @@
                     <p class="text-cp-light-grey leading-[30px] max-w-[437px]">{{ $hero->subheading }}</p>
                 </div>
                 <div class="flex items-center gap-4">
-                    <a href="" class="bg-cp-dark-blue p-5 w-fit rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">{{ __('Explore Now') }}</a>
+                    <a href="" class="bg-cp-dark-blue p-5 w-fit rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">{{ __('Jelajahi Sekarang') }}</a>
                     <button class="bg-cp-black p-5 w-fit rounded-xl font-bold text-white flex items-center gap-[10px]" onclick="{modal.show()}">
                         <div class="w-6 h-6 flex shrink-0 overflow-hidden">
                             <img src="{{ asset('assets/icons/play-circle.svg') }}" class="w-full h-full object-contain" alt="icon" />
                         </div>
-                        <span>{{ __('Watch Video') }}</span>
+                        <span>{{ __('Tonton Video') }}</span>
                     </button>
                 </div>
             </div>
@@ -42,7 +42,7 @@
     </div>
     <!-- Client -->
     <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
-        <h2 class="font-bold text-lg">Trusted by 500+ Top Leaders Worldwide</h2>
+        <h2 class="font-bold text-lg">Dipercaya oleh 500+ Pemimpin Teratas di Dunia</h2>
         <div class="logo-container flex flex-wrap gap-5 justify-center">
             <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
                 <div class="overflow-hidden h-9">
@@ -95,13 +95,13 @@
     <div id="OurPrinciples" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
-                <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">OUR PRINCIPLES</p>
+                <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">PRINSIP KAMI</p>
                 <h2 class="font-bold text-4xl leading-[45px]">
-                    We Might Best Choice <br />
-                    For Your Company
+                    Kami Bisa Jadi Pilihan Terbaik <br />
+                    Untuk Perusahaan Anda
                 </h2>
             </div>
-            <a href="" class="bg-cp-black p-[14px_20px] w-fit rounded-xl font-bold text-white">Explore More</a>
+            <a href="" class="bg-cp-black p-[14px_20px] w-fit rounded-xl font-bold text-white">Jelajahi Lebih Banyak</a>
         </div>
         <div class="flex flex-wrap items-center gap-[30px] justify-center">
             @forelse ($principles as $principle)    
@@ -117,11 +117,11 @@
                             <p class="title font-bold text-xl leading-[30px]">{{ $principle->name }}</p>
                             <p class="leading-[30px] text-cp-light-grey">{{ $principle->subtitle }}</p>
                         </div>
-                        <a href="" class="font-semibold text-cp-dark-blue">{{ __('Learn More') }}</a>
+                        <a href="" class="font-semibold text-cp-dark-blue">{{ __('Pelajari Lebih Lanjut') }}</a>
                     </div>
                 </div>
             @empty
-                <p>{{ __('No data yet') }}</p>
+                <p>{{ __('Belum ada data') }}</p>
             @endforelse
         </div>
     </div>
@@ -138,7 +138,7 @@
                         <p class="text-cp-light-grey">{{ $statistic->name }}</p>
                     </div>
                 @empty
-                    <p>{{ __('No data yet') }}</p>
+                    <p>{{ __('Belum ada data') }}</p>
                 @endforelse
             </div>
         </div>
@@ -156,21 +156,21 @@
                         <h2 class="font-bold text-4xl leading-[45px]">{{ $product->name }}</h2>
                         <p class="leading-[30px] text-cp-light-grey">{{ $product->about}}</p>
                     </div>
-                    <a href="{{ route('front.appointment') }}" class="bg-cp-dark-blue p-[14px_20px] w-fit rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">Book Appointment</a>
+                    <a href="{{ route('front.appointment') }}" class="bg-cp-dark-blue p-[14px_20px] w-fit rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">Buat Janji</a>
                 </div>
             </div>
         @empty
-            <p>{{ __('No data yet') }}</p>
+            <p>{{ __('Belum ada data') }}</p>
         @endforelse
     </div>
     <!-- Teams -->
     <div id="Teams" class="bg-[#F6F7FA] w-full py-20 px-[10px] mt-20">
         <div class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] items-center">
             <div class="flex flex-col gap-[14px] items-center">
-                <p class="badge w-fit bg-cp-light-blue text-white p-[8px_16px] rounded-full uppercase font-bold text-sm">OUR POWERFUL TEAM</p>
+                <p class="badge w-fit bg-cp-light-blue text-white p-[8px_16px] rounded-full uppercase font-bold text-sm">TIM KAMI YANG HEBAT</p>
                 <h2 class="font-bold text-4xl leading-[45px] text-center">
-                    We Share Same Dreams <br />
-                    Change The World
+                    Kami Memiliki Mimpi yang Sama <br />
+                    Mengubah Dunia
                 </h2>
             </div>
             <div class="teams-card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] justify-center">
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>{{ __('No data yet') }}</p>
+                    <p>{{ __('Belum ada data') }}</p>
                 @endforelse
                 <a href="{{ route('front.teams') }}" class="view-all-card">
                     <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] gap-[30px] rounded-[20px] border border-white hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
@@ -201,8 +201,8 @@
                             <img src="{{ asset('assets/icons/profile-2user.svg') }}" alt="icon" />
                         </div>
                         <div class="flex flex-col gap-1 text-center">
-                            <p class="font-bold text-xl leading-[30px]">{{ __('View All') }}</p>
-                            <p class="text-cp-light-grey">{{ __('Our Great People') }}</p>
+                            <p class="font-bold text-xl leading-[30px]">{{ __('Lihat Semua') }}</p>
+                            <p class="text-cp-light-grey">{{ __('Orang-Orang Hebat Kami') }}</p>
                         </div>
                     </div>
                 </a>
@@ -212,8 +212,8 @@
     <!-- Testimonials -->
     <div id="Testimonials" class="w-full flex flex-col gap-[50px] items-center mt-20">
         <div class="flex flex-col gap-[14px] items-center">
-            <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">SUCCESS CLIENTS</p>
-            <h2 class="font-bold text-4xl leading-[45px] text-center">Our Satisfied Clients<br />From Worldwide Company</h2>
+            <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">KLIEN SUKSES</p>
+            <h2 class="font-bold text-4xl leading-[45px] text-center">Klien Kami yang Puas<br />Dari Perusahaan di Seluruh Dunia</h2>
         </div>
         <div class="main-carousel w-full">
             @forelse ($testimonials as $testimonial)    
@@ -265,7 +265,7 @@
                     </div>
                 </div>
             @empty
-                <p>{{ __('No data yet') }}</p>
+                <p>{{ __('Belum ada data') }}</p>
             @endforelse
         </div>
     </div>
@@ -273,10 +273,10 @@
     <div id="Awards" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
-                <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">OUR AWARDS</p>
-                <h2 class="font-bold text-4xl leading-[45px]">We’ve Dedicated Our<br />Best Team Efforts</h2>
+                <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">PENGHARGAAN KAMI</p>
+                <h2 class="font-bold text-4xl leading-[45px]">Kami Mendedikasikan<br />Upaya Terbaik Tim</h2>
             </div>
-            <a href="" class="bg-cp-black p-[14px_20px] w-fit rounded-xl font-bold text-white">Explore More</a>
+            <a href="" class="bg-cp-black p-[14px_20px] w-fit rounded-xl font-bold text-white">Jelajahi Lebih Banyak</a>
         </div>
         <div class="awards-card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] justify-center">
             <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-blue transition-all duration-300">
@@ -284,7 +284,7 @@
                     <img src="{{ asset('assets/icons/cup-blue.svg') }}" alt="icon" />
                 </div>
                 <hr class="border-[#E8EAF2]" />
-                <p class="font-bold text-xl leading-[30px]">Solid Fundamental Crafter Async</p>
+                <p class="font-bold text-xl leading-[30px]">Fondasi Solid dan Pengerjaan Rapi</p>
                 <hr class="border-[#E8EAF2]" />
                 <p class="text-cp-light-grey">Bali, 2020</p>
             </div>
@@ -293,7 +293,7 @@
                     <img src="{{ asset('assets/icons/cup-blue.svg') }}" alt="icon" />
                 </div>
                 <hr class="border-[#E8EAF2]" />
-                <p class="font-bold text-xl leading-[30px]">Most Crowded Yet Harmony Place</p>
+                <p class="font-bold text-xl leading-[30px]">Tempat Tersibuk Namun Tetap Harmonis</p>
                 <hr class="border-[#E8EAF2]" />
                 <p class="text-cp-light-grey">Shanghai, 2021</p>
             </div>
@@ -302,7 +302,7 @@
                     <img src="{{ asset('assets/icons/cup-blue.svg') }}" alt="icon" />
                 </div>
                 <hr class="border-[#E8EAF2]" />
-                <p class="font-bold text-xl leading-[30px]">Small Things Made Much Big Impacts</p>
+                <p class="font-bold text-xl leading-[30px]">Hal Kecil Memberi Dampak Besar</p>
                 <hr class="border-[#E8EAF2]" />
                 <p class="text-cp-light-grey">Zurich, 2022</p>
             </div>
@@ -311,7 +311,7 @@
                     <img src="{{ asset('assets/icons/cup-blue.svg') }}" alt="icon" />
                 </div>
                 <hr class="border-[#E8EAF2]" />
-                <p class="font-bold text-xl leading-[30px]">Teamwork and Solidarity</p>
+                <p class="font-bold text-xl leading-[30px]">Kerja Sama dan Solidaritas</p>
                 <hr class="border-[#E8EAF2]" />
                 <p class="text-cp-light-grey">Bandung, 2023</p>
             </div>
@@ -323,53 +323,53 @@
             <div class="flex flex-col lg:flex-row gap-[50px] sm:gap-[70px] items-center">
                 <div class="flex flex-col gap-[30px]">
                     <div class="flex flex-col gap-[10px]">
-                        <h2 class="font-bold text-4xl leading-[45px]">Frequently Asked Questions</h2>
+                        <h2 class="font-bold text-4xl leading-[45px]">Pertanyaan yang Sering Diajukan</h2>
                     </div>
-                    <a href="{{ route('front.appointment') }}" class="p-5 bg-cp-black rounded-xl text-white w-fit font-bold">Contact Us</a>
+                    <a href="{{ route('front.appointment') }}" class="p-5 bg-cp-black rounded-xl text-white w-fit font-bold">Hubungi Kami</a>
                 </div>
                 <div class="flex flex-col gap-[30px] sm:w-[603px] shrink-0">
                     <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
                         <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-1">
-                            <span class="font-bold text-lg leading-[27px] text-left">Can installments be beneficial for both?</span>
+                            <span class="font-bold text-lg leading-[27px] text-left">Apakah pembayaran bertahap menguntungkan bagi kedua pihak?</span>
                             <div class="arrow w-9 h-9 flex shrink-0">
                                 <img src="{{ asset('assets/icons/arrow-circle-down.svg') }}" class="transition-all duration-300" alt="icon" />
                             </div>
                         </button>
                         <div id="accordion-faq-1" class="accordion-content hide">
-                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">Kami ingin melindungi aset kami dan klien semaksimal mungkin, sehingga kami memilih solusi terbaik dari Jakarta, Indonesia, serta memastikan perlindungan setelah pembangunan selesai.</p>
                         </div>
                     </div>
                     <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
                         <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-2">
-                            <span class="font-bold text-lg leading-[27px] text-left">What kind of framework you popular with?</span>
+                            <span class="font-bold text-lg leading-[27px] text-left">Jenis kerangka apa yang paling sering Anda gunakan?</span>
                             <div class="arrow w-9 h-9 flex shrink-0">
                                 <img src="{{ asset('assets/icons/arrow-circle-down.svg') }}" class="transition-all duration-300" alt="icon" />
                             </div>
                         </button>
                         <div id="accordion-faq-2" class="accordion-content hide">
-                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">Kami ingin melindungi aset kami dan klien semaksimal mungkin, sehingga kami memilih solusi terbaik dari Jakarta, Indonesia, serta memastikan perlindungan setelah pembangunan selesai.</p>
                         </div>
                     </div>
                     <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
                         <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-3">
-                            <span class="font-bold text-lg leading-[27px] text-left">What insurance provider do you use?</span>
+                            <span class="font-bold text-lg leading-[27px] text-left">Penyedia asuransi apa yang Anda gunakan?</span>
                             <div class="arrow w-9 h-9 flex shrink-0">
                                 <img src="{{ asset('assets/icons/arrow-circle-down.svg') }}" class="transition-all duration-300" alt="icon" />
                             </div>
                         </button>
                         <div id="accordion-faq-3" class="accordion-content hide">
-                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">Kami ingin melindungi aset kami dan klien semaksimal mungkin, sehingga kami memilih solusi terbaik dari Jakarta, Indonesia, serta memastikan perlindungan setelah pembangunan selesai.</p>
                         </div>
                     </div>
                     <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
                         <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-4">
-                            <span class="font-bold text-lg leading-[27px] text-left">What if we have other questions?</span>
+                            <span class="font-bold text-lg leading-[27px] text-left">Bagaimana jika kami punya pertanyaan lain?</span>
                             <div class="arrow w-9 h-9 flex shrink-0">
                                 <img src="{{ asset('assets/icons/arrow-circle-down.svg') }}" class="transition-all duration-300" alt="icon" />
                             </div>
                         </button>
                         <div id="accordion-faq-4" class="accordion-content hide">
-                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                            <p class="leading-[30px] text-cp-light-grey pt-[14px]">Kami ingin melindungi aset kami dan klien semaksimal mungkin, sehingga kami memilih solusi terbaik dari Jakarta, Indonesia, serta memastikan perlindungan setelah pembangunan selesai.</p>
                         </div>
                     </div>
                 </div>
@@ -383,12 +383,12 @@
             <div class="relative bg-white rounded-[20px] overflow-hidden shadow">
                 <!-- Modal header -->
                 <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
-                    <h3 class="text-xl font-semibold text-cp-black">Company Profile Video</h3>
+                    <h3 class="text-xl font-semibold text-cp-black">Video Profil Perusahaan</h3>
                     <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" onclick="{modal.hide()}">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                         </svg>
-                        <span class="sr-only">Close modal</span>
+                        <span class="sr-only">Tutup modal</span>
                     </button>
                 </div>
                 <!-- Modal body -->
@@ -397,7 +397,7 @@
                     <input type="hidden" name="path-video" id="path-video" value="{{ $hero->path_video }}">
                     @endif
                     <!-- video src added from the js script (modal-video.js) to prevent video running in the backgroud -->
-                    <iframe id="videoFrame" class="aspect-[16/9]" width="100%" src="" title="Demo Project Laravel Portfolio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="videoFrame" class="aspect-[16/9]" width="100%" src="" title="Demo Proyek Portofolio Laravel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

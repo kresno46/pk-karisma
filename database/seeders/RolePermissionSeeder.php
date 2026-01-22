@@ -19,15 +19,15 @@ class RolePermissionSeeder extends Seeder
          * Super Admin seeder
          */
         $permissions = [
-            'Manage Statistics',
-            'Manage Products',
-            'Manage Principles',
-            'Manage Testimonials',
-            'Manage Clients',
-            'Manage Teams',
-            'Manage Abouts',
-            'Manage Appointment',
-            'Manage Hero Sections',
+            'Kelola Statistik',
+            'Kelola Produk',
+            'Kelola Prinsip',
+            'Kelola Testimoni',
+            'Kelola Klien',
+            'Kelola Tim',
+            'Kelola Tentang',
+            'Kelola Janji Temu',
+            'Kelola Bagian Hero',
         ];
 
         foreach($permissions as $permission) {
@@ -62,9 +62,9 @@ class RolePermissionSeeder extends Seeder
          * Multi Role seeder example
          */
         $designManagerPermissions = [
-            'Manage Products',
-            'Manage Principles',
-            'Manage Testimonials',
+            'Kelola Produk',
+            'Kelola Prinsip',
+            'Kelola Testimoni',
         ];
 
         $designManagerRole = Role::firstOrCreate(

@@ -19,7 +19,7 @@
                 </div>
                 <h1 class="font-bold text-4xl leading-[45px] text-center">{{ $blog->title }}</h1>
                 @if($blog->published_at)
-                    <p class="text-cp-light-grey">Dipublikasikan pada {{ $blog->published_at->format('d M Y') }}</p>
+                    <p class="text-cp-light-grey">Dipublikasikan pada {{ $blog->published_at->format('d/m/Y') }}</p>
                 @endif
             </div>
         </div>

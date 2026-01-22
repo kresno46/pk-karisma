@@ -1,13 +1,13 @@
 <footer class="bg-cp-black w-full relative overflow-hidden mt-20">
     <div class="container max-w-[1130px] mx-auto flex flex-wrap gap-y-4 items-center justify-between pt-[100px] pb-[220px] relative z-10">
         <div class="flex flex-col gap-10">
-            <div class="flex items-center gap-3">
-                <div class="flex shrink-0 h-[43px] overflow-hidden">
+            <div class="flex items-center gap-1">
+                <div class="flex shrink-0 h-[52px] w-[52px] overflow-hidden">
                     <img src="{{ asset('assets/logo/logo-white.svg') }}" class="object-contain w-full h-full" alt="logo" />
                 </div>
                 <div class="flex flex-col">
-                    <p id="CompanyName" class="font-extrabold text-xl leading-[30px] text-white">{{ config('app.name') }}</p>
-                    <p id="CompanyTagline" class="text-sm text-cp-light-grey">{{ config('company.tagline') }}</p>
+                    <p id="CompanyNama" class="font-extrabold text-xl leading-[30px] text-white">{{ config('app.name') }}</p>
+                    <p id="CompanySlogan" class="text-sm text-cp-light-grey">{{ config('company.tagline') }}</p>
                 </div>
             </div>
             <div class="flex items-center gap-4">
@@ -37,8 +37,8 @@
             <div class="flex flex-col w-[200px] gap-3">
                 <p class="font-bold text-lg text-white">Produk</p>
                 <a href="{{ route('front.products') }}" class="text-cp-light-grey hover:text-white transition-all duration-300">Kayu Olahan</a>
-                <a href="{{ route('front.products') }}" class="text-cp-light-grey hover:text-white transition-all duration-300">Plywood</a>
-                <a href="{{ route('front.products') }}" class="text-cp-light-grey hover:text-white transition-all duration-300">Decking</a>
+                <a href="{{ route('front.products') }}" class="text-cp-light-grey hover:text-white transition-all duration-300">Kayu Lapis</a>
+                <a href="{{ route('front.products') }}" class="text-cp-light-grey hover:text-white transition-all duration-300">Dek</a>
                 <a href="{{ route('front.products') }}" class="text-cp-light-grey hover:text-white transition-all duration-300">Pallet & Kemasan</a>
             </div>
             <div class="flex flex-col w-[200px] gap-3">

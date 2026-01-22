@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>@yield('title', 'Welcome') - {{ config('app.name') }}</title>
+        <title>@yield('title', 'Beranda') - {{ config('app.name') }}</title>
         <meta name="description" content="@yield('meta_description', '')" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

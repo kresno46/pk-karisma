@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>{{ __('No data yet') }}</p>
+                    <p>{{ __('Belum ada data') }}</p>
                 @endforelse
             </div>
         </div>
@@ -63,7 +63,7 @@
                         <p class="text-cp-light-grey">{{ $statistic->name }}</p>
                     </div>
                 @empty
-                    <p>{{ __('No data yet') }}</p>
+                    <p>{{ __('Belum ada data') }}</p>
                 @endforelse
             </div>
         </div>

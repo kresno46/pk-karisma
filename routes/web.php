@@ -33,48 +33,48 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::prefix('admin')->name('admin.')->group(function () {
-        // Manage Statistics
-        Route::middleware('can: Manage Statistics')->group(function () {
+        // Kelola Statistik
+        Route::middleware('can: Kelola Statistik')->group(function () {
             Route::resource('statistics', CompanyStatisticController::class);
         });
 
-        // Manage Products
-        Route::middleware('can: Manage Products')->group(function () {
+        // Kelola Produk
+        Route::middleware('can: Kelola Produk')->group(function () {
             Route::resource('products', ProductController::class);
         });
 
-        // Manage Principles
-        Route::middleware('can: Manage Principles')->group(function () {
+        // Kelola Prinsip
+        Route::middleware('can: Kelola Prinsip')->group(function () {
             Route::resource('principles', OurPrincipleController::class);
         });
 
-        // Manage Testimonials
-        Route::middleware('can: Manage Testimonials')->group(function () {
+        // Kelola Testimoni
+        Route::middleware('can: Kelola Testimoni')->group(function () {
             Route::resource('testimonials', TestimonialController::class);
         });
 
-        // Manage Clients
-        Route::middleware('can: Manage Clients')->group(function () {
+        // Kelola Klien
+        Route::middleware('can: Kelola Klien')->group(function () {
             Route::resource('clients', ProjectClientController::class);
         });
 
-        // Manage Teams
-        Route::middleware('can: Manage Teams')->group(function () {
+        // Kelola Tim
+        Route::middleware('can: Kelola Tim')->group(function () {
             Route::resource('teams', OurTeamController::class);
         });
 
-        // Manage Abouts
-        Route::middleware('can: Manage Abouts')->group(function () {
+        // Kelola Tentang
+        Route::middleware('can: Kelola Tentang')->group(function () {
             Route::resource('abouts', CompanyAboutController::class);
         });
 
-        // Manage Appointment
-        Route::middleware('can: Manage Appointment')->group(function () {
+        // Kelola Janji Temu
+        Route::middleware('can: Kelola Janji Temu')->group(function () {
             Route::resource('appointments', AppointmentController::class);
         });
 
-        // Manage Hero Sections
-        Route::middleware('can: Manage Hero Sections')->group(function () {
+        // Kelola Bagian Hero
+        Route::middleware('can: Kelola Bagian Hero')->group(function () {
             Route::resource('hero-sections', HeroSectionController::class);
         });
     });

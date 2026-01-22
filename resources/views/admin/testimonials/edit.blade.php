@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Edit Testimonial') }}
+            {{ __('Ubah Testimoni') }}
         </h2>
     </x-slot>
 
@@ -21,7 +21,7 @@
                     @csrf
                     @method('PUT')
                     <div class="mt-4">
-                        <x-input-label for="project_client" :value="__('Project Client')" />
+                        <x-input-label for="project_client" :value="__('Klien Proyek')" />
                         
                         <select name="project_client_id" id="project_client_id" class="py-3 rounded-lg pl-3 w-full border border-slate-300">
                             @foreach ($clients as $client)
@@ -48,7 +48,7 @@
                     <div class="flex items-center justify-end mt-4">
             
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                            Update Testimonial
+                            Perbarui Testimoni
                         </button>
                     </div>
                 </form>

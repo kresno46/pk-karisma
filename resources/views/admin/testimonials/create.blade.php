@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('New Testimonial') }}
+            {{ __('Testimoni Baru') }}
         </h2>
     </x-slot>
 
@@ -20,9 +20,9 @@
                 <form method="POST" action="{{ route('admin.testimonials.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-4">
-                        <x-input-label for="project_client" :value="__('Project Client')" />
+                        <x-input-label for="project_client" :value="__('Klien Proyek')" />
                             <select name="project_client_id" id="project_client_id" class="py-3 rounded-lg pl-3 w-full border border-slate-300">
-                                <option value="">Select Project Client</option> 
+                                <option value="">Pilih Klien Proyek</option> 
                                 @foreach ($clients as $client)
                                     <option value="{{ $client->id }}">{{ $client->name }}</option> 
                                 @endforeach
@@ -45,7 +45,7 @@
                     <div class="flex items-center justify-end mt-4">
             
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                            Add New Testimonial
+                            Tambah Testimoni Baru
                         </button>
                     </div>
                 </form>

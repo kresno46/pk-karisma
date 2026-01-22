@@ -42,14 +42,14 @@
 
                         <!-- Meta Title -->
                         <div class="mb-4">
-                            <x-input-label for="meta_title" :value="__('Meta Title (SEO)')" />
+                        <x-input-label for="meta_title" :value="__('Judul Meta (SEO)')" />
                             <x-text-input id="meta_title" class="block mt-1 w-full" type="text" name="meta_title" :value="old('meta_title')" />
                             <x-input-error :messages="$errors->get('meta_title')" class="mt-2" />
                         </div>
 
                         <!-- Meta Description -->
                         <div class="mb-4">
-                            <x-input-label for="meta_description" :value="__('Meta Description (SEO)')" />
+                        <x-input-label for="meta_description" :value="__('Deskripsi Meta (SEO)')" />
                             <textarea id="meta_description" class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" name="meta_description" rows="3">{{ old('meta_description') }}</textarea>
                             <x-input-error :messages="$errors->get('meta_description')" class="mt-2" />
                         </div>

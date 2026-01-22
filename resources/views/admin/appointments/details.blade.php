@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex flex-row justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Details Booking') }}
+                {{ __('Detail Janji Temu') }}
             </h2>
         </div>
     </x-slot>
@@ -15,7 +15,7 @@
                     <div class="flex flex-row items-center gap-x-3">
                         <img src="{{ Storage::url($appointment->product->thumbnail) }}" alt="" class="rounded-2xl object-cover w-[120px] h-[90px]">
                         <div class="flex flex-col">
-                            <p class="text-slate-500 text-sm">Product Interest</p>
+                            <p class="text-slate-500 text-sm">Minat Produk</p>
                             <h3 class="text-indigo-950 text-xl font-bold">{{ $appointment->product->name }}</h3>
                         </div>
                     </div>  
@@ -26,7 +26,7 @@
                 <div class="grid grid-cols-2 gap-5">
                     <div class="flex flex-col gap-y-4">
                         <div class="flex flex-col">
-                            <p class="text-slate-500 text-sm">Name</p>
+                            <p class="text-slate-500 text-sm">Nama</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
                                 {{ $appointment->name }}
                             </h3>
@@ -40,7 +40,7 @@
                         </div>
         
                         <div class="flex flex-col">
-                            <p class="text-slate-500 text-sm">Phone</p>
+                            <p class="text-slate-500 text-sm">Telepon</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
                                 {{ $appointment->phone_number }}
                             </h3>
@@ -48,23 +48,23 @@
                     </div>
                     <div class="flex flex-col gap-y-4">
                         <div class="flex flex-col">
-                            <p class="text-slate-500 text-sm">Brief</p>
+                            <p class="text-slate-500 text-sm">Ringkasan</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
                                 {{ $appointment->brief }}
                             </h3>
                         </div>
         
                         <div class="flex flex-col">
-                            <p class="text-slate-500 text-sm">Budget</p>
+                            <p class="text-slate-500 text-sm">Anggaran</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
                                 ${{ number_format($appointment->budget, 0, ',', '.') }}
                             </h3>
                         </div>
         
                         <div class="flex flex-col">
-                            <p class="text-slate-500 text-sm">Meeting Date At</p>
+                            <p class="text-slate-500 text-sm">Tanggal Pertemuan</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                {{ $appointment->meeting_at->format('F d, Y') }}
+                                {{ $appointment->meeting_at->format('d/m/Y') }}
                             </h3>
                         </div>
 
@@ -74,7 +74,7 @@
                 <hr class="my-5">
 
                 <a href="#" class="text-center font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                    Follow Up Customer
+                    Tindak Lanjut Pelanggan
                 </a>
 
             </div>

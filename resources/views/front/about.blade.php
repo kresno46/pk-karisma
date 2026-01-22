@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div id="About" class="container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
+    <div id="Tentang" class="container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
         @forelse ($abouts as $about)
             <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
                 <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
@@ -46,7 +46,7 @@
                 </div>
             </div>
         @empty
-            <p>{{ __('No data yet') }}</p>
+            <p>{{ __('Belum ada data') }}</p>
         @endforelse
     </div>
 
@@ -93,7 +93,7 @@
                         <p class="text-cp-light-grey">{{ $statistic->name }}</p>
                     </div>
                 @empty
-                    <p>{{ __('No data yet') }}</p>
+                    <p>{{ __('Belum ada data') }}</p>
                 @endforelse
             </div>
         </div>

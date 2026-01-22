@@ -13,14 +13,14 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Home') }}
+                        {{ __('Dasbor') }}
                     </x-nav-link>
 
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                    <div>Landing Page</div>
+                                    <div>Halaman Utama</div>
         
                                     <div class="ms-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -32,31 +32,31 @@
         
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('admin.hero-sections.index')">
-                                    {{ __('Hero Section') }}
+                                    {{ __('Bagian Hero') }}
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('admin.principles.index')">
-                                    {{ __('Our Principles') }}
+                                    {{ __('Prinsip Kami') }}
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('admin.statistics.index')">
-                                    {{ __('Company Stats') }}
+                                    {{ __('Statistik Perusahaan') }}
                                 </x-dropdown-link>
                             </x-slot>
                         </x-dropdown>
                     </div>
 
                     <x-nav-link :href="route('admin.teams.index')" :active="request()->routeIs('admin.teams.index')">
-                        {{ __('Our Teams') }}
+                        {{ __('Tim Kami') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('admin.products.index')" :active="request()->routeIs('admin.products.index')">
-                        {{ __('Our Products') }}
+                        {{ __('Produk Kami') }}
                     </x-nav-link>
 
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                    <div>Stories</div>
+                                    <div>Cerita</div>
         
                                     <div class="ms-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -68,21 +68,21 @@
         
                             <x-slot name="content">
                                 <x-dropdown-link :href="route('admin.testimonials.index')">
-                                    {{ __('Testimonials') }}
+                                    {{ __('Testimoni') }}
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('admin.clients.index')">
-                                    {{ __('Our Clients') }}
+                                    {{ __('Klien Kami') }}
                                 </x-dropdown-link>
                             </x-slot>
                         </x-dropdown>
                     </div>
 
                     <x-nav-link :href="route('admin.abouts.index')" :active="request()->routeIs('admin.abouts.index')">
-                        {{ __('About') }}
+                        {{ __('Tentang') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('admin.appointments.index')" :active="request()->routeIs('admin.appointments.index')">
-                        {{ __('Appointments') }}
+                        {{ __('Janji Temu') }}
                     </x-nav-link>
 
                 </div>
@@ -105,7 +105,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Profil') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -115,7 +115,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Keluar') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -138,7 +138,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Dasbor') }}
             </x-responsive-nav-link>
         </div>
 
@@ -151,7 +151,7 @@
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('Profil') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
@@ -161,7 +161,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Keluar') }}
                     </x-responsive-nav-link>
                 </form>
             </div>

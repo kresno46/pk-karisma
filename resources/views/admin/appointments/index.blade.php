@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex flex-row justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Manage Appointments') }}
+                {{ __('Kelola Janji Temu') }}
             </h2>
         </div>
     </x-slot>
@@ -19,21 +19,21 @@
                             </div>
                         </div> 
                         <div  class="hidden md:flex flex-col">
-                            <p class="text-slate-500 text-sm">Budget</p>
+                            <p class="text-slate-500 text-sm">Anggaran</p>
                             <h3 class="text-indigo-950 text-xl font-bold">${{ number_format($appointment->budget, 0, ',', '.') }}</h3>
                         </div>
                         <div  class="hidden md:flex flex-col">
-                            <p class="text-slate-500 text-sm">Date</p>
-                            <h3 class="text-indigo-950 text-xl font-bold">{{ $appointment->meeting_at->format('M d, Y') }}</h3>
+                            <p class="text-slate-500 text-sm">Tanggal</p>
+                            <h3 class="text-indigo-950 text-xl font-bold">{{ $appointment->meeting_at->format('d/m/Y') }}</h3>
                         </div>
                         <div class="hidden md:flex flex-row items-center gap-x-3">
                             <a href="{{ route('admin.appointments.show', $appointment) }}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                                Details
+                                Detail
                             </a>
                         </div>
                     </div> 
                 @empty
-                    <p>No data yet.</p>
+                    <p>Belum ada data.</p>
                 @endforelse
                 {{ $appointments->links() }}
             </div>

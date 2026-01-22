@@ -2,10 +2,10 @@
     <x-slot name="header">
         <div class="flex flex-row justify-between items-center">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Manage Hero Sections') }}
+                {{ __('Kelola Bagian Hero') }}
             </h2>
             <a href="{{ route('admin.hero-sections.create') }}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                Add New
+                Tambah Baru
             </a>
         </div>
     </x-slot>
@@ -23,24 +23,24 @@
                             </div>
                         </div> 
                         <div  class="hidden md:flex flex-col">
-                            <p class="text-slate-500 text-sm">Date</p>
-                            <h3 class="text-indigo-950 text-xl font-bold">{{ $hero->created_at->format('M d, Y') }}</h3>
+                            <p class="text-slate-500 text-sm">Tanggal</p>
+                            <h3 class="text-indigo-950 text-xl font-bold">{{ $hero->created_at->format('d/m/Y') }}</h3>
                         </div>
                         <div class="hidden md:flex flex-row items-center gap-x-3">
                             <a href="{{ route('admin.hero-sections.edit', $hero) }}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                                Edit
+                                Ubah
                             </a>
                             <form action="{{ route('admin.hero-sections.destroy', $hero) }}" method="POST"> 
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="font-bold py-4 px-6 bg-red-700 text-white rounded-full">
-                                    Delete
+                                    Hapus
                                 </button>
                             </form>
                         </div>
                     </div>
                 @empty
-                    <p>No data yet.</p>
+                    <p>Belum ada data.</p>
                 @endforelse 
             </div>
         </div>

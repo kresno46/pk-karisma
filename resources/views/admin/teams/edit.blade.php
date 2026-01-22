@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('New Team') }}
+            {{ __('Tim Baru') }}
         </h2>
     </x-slot>
 
@@ -21,19 +21,19 @@
                     @csrf
                     @method('PUT')
                     <div>
-                        <x-input-label for="name" :value="__('Name')" />
+                        <x-input-label for="name" :value="__('Nama')" />
                         <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" value="{{ $team->name }}" required autofocus autocomplete="name" />
                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
 
                     <div class="mt-4">
-                        <x-input-label for="occupation" :value="__('Occupation')" />
+                        <x-input-label for="occupation" :value="__('Pekerjaan')" />
                         <x-text-input id="occupation" class="block mt-1 w-full" type="text" name="occupation" value="{{ $team->occupation }}" required autofocus autocomplete="occupation" />
                         <x-input-error :messages="$errors->get('occupation')" class="mt-2" />
                     </div>
 
                     <div class="mt-4">
-                        <x-input-label for="location" :value="__('Location')" />
+                        <x-input-label for="location" :value="__('Lokasi')" />
                         <x-text-input id="location" class="block mt-1 w-full" type="text" name="location" value="{{ $team->location }}" required autofocus autocomplete="location" />
                         <x-input-error :messages="$errors->get('location')" class="mt-2" />
                     </div>
@@ -48,7 +48,7 @@
                     <div class="flex items-center justify-end mt-4">
             
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
-                            Update Team
+                            Perbarui Tim
                         </button>
                     </div>
                 </form>
