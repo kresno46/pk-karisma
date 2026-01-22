@@ -1,0 +1,131 @@
+- Install Laravel 11
+  $ composer create-project "laravel/laravel:^11.0" pk-karisma
+
+- Configure Hosts
+
+- Create database and configure .env
+
+- Check database connection
+  $ php artisan db:monitor
+
+# Redis Integration
+- Modify .env
+  CACHE_STORE=redis
+  QUEUE_CONNECTION=redis
+  SESSION_DRIVER=redis
+  REDIS_HOST=redis (Docker Container)
+  REDIS_PASSWORD=null (Set Redis Password)
+  REDIS_PORT=6379
+- Check Redis Connection
+  $ php artisan tinker
+  > Cache::put('test', 'redis-works', 10);
+  > Cache::get('test');
+  $"redis-works" (Output)
+
+- Install Laravel Breeze
+  $ composer require laravel/breeze --dev
+  $ php artisan breeze:install
+  $ php artisan migrate
+
+- Configure vite.config.js if using Docker
+  server: {
+      host: '0.0.0.0',
+      port: 5173,
+      strictPort: true,
+      cors: {
+          origin: ['http://custom.domain.org'],
+      },
+      hmr: {
+          host: 'custom.domain.org',
+          protocol: 'ws',
+      },
+      headers: {
+          'Access-Control-Allow-Origin': '*',
+      },
+  },
+- Modify .env
+  APP_URL=http://custom.domain.org
+
+- Run
+  $ npm run dev
+
+- Install Spatie
+  $ composer require spatie/laravel-permission
+  $ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+  $ php artisan optimize:clear
+  $ php artisan migrate
+- Modify User models
+
+- Role Permission Seeder
+  $ php artisan make:seeder RolePermissionSeeder
+- Modify RolePermissionSeeder and run seeder
+  $ php artisan db:seed --class=RolePermissionSeeder
+
+- Create Model, Migration and Controller
+  $ php artisan make:model ProjectClient -mcr
+  $ php artisan make:model Product -mcr
+  $ php artisan make:model CompanyStatistic -mcr
+  $ php artisan make:model Testimonial -mcr
+  $ php artisan make:model Appointment -mcr
+  $ php artisan make:model OurPrinsiple -mcr
+  $ php artisan make:model HeroSection -mcr
+  $ php artisan make:model OurTeam -mcr
+  $ php artisan make:model CompanyAbout -mcr
+  $ php artisan make:model CompanyKeypoint -mcr
+- Modify all migration files above
+- Migarte to database (make sure the relationship table above)
+  $ php artisan migrate
+- Modify all Models above
+
+# Create Larave Route
+- Remove register from auth.php routes
+- Modify web.php routes
+- Refactor typo
+
+# CMS Page Preparation
+- Create FrontController
+  $ php artisan make:controller FrontController
+- Copy all pages to views
+- Assign super_admin role to AppServiceProvider.php
+
+- Create Custom Form Request
+  $ php artisan make:request StoreProductRequest
+  $ php artisan make:request UpdateProductRequest
+  $ php artisan make:request StoreStatisticRequest
+  $ php artisan make:request UpdateStatisticRequest
+  $ php artisan make:request StoreTeamRequest
+  $ php artisan make:request UpdateTeamRequest
+  $ php artisan make:request StoreHeroSectionRequest
+  $ php artisan make:request UpdateHeroSectionRequest
+  $ php artisan make:request StoreAboutRequest
+  $ php artisan make:request UpdateAboutRequest
+  $ php artisan make:request StorePrincipleRequest
+  $ php artisan make:request UpdatePrincipleRequest
+  $ php artisan make:request StoreTestimonialRequest
+  $ php artisan make:request UpdateTestimonialRequest
+  $ php artisan make:request StoreAppointmentRequest
+  $ php artisan make:request UpdateAppointmentRequest
+  $ php artisan make:request StoreClientRequest
+  $ php artisan make:request UpdateClientRequest
+- Modify all request files above
+
+- Symlink (symbolic link) storage folder
+  $ php artisan storage:link
+
+# Insert Data
+- Modify all controllers to store()
+
+# Remove Delete File form Storage Function
+
+# Update Data
+- Modify all files to update data
+
+- Modify Home views
+- Create Products views
+- Create Teams views
+- Create About views
+- Create Appointment views
+- Modify web.php routes
+- Modify FrontController
+- Modify AppointmentController
+- Modify Admin Appointment Index and Detail views

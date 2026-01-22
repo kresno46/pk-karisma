@@ -1,0 +1,20 @@
+<svg width="180" height="44" viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M27.5 4.5L6.5 21.5H48.5L27.5 4.5Z" stroke="#FFFFFF" stroke-width="2.8" stroke-linejoin="round"/>
+    <path d="M27.5 9.5L12.3 21.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M27.5 9.5L42.7 21.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+
+    <path d="M6 29.2C13.2 23.8 20.2 22.2 27.5 22.2C34.8 22.2 41.8 23.8 49 29.2" stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round"/>
+
+    <path d="M27.5 26.8L18.2 43H36.8L27.5 26.8Z" fill="#E11D48"/>
+    <path d="M27.5 30.1L21.1 41.3H24.2L27.5 35.6L30.8 41.3H33.9L27.5 30.1Z" fill="#BE123C"/>
+
+    <rect x="13" y="34.2" width="29" height="7.6" rx="3.6" fill="#8B5A2B"/>
+    <path d="M18 36.3C21 35.5 24 35.5 27 36.3" stroke="#6F4520" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M28 39.7C31.2 38.9 34.1 38.9 37 39.7" stroke="#6F4520" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <text x="60" y="31" fill="#FFFFFF" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0.5">
+    PK-KARISMA
+  </text>
+</svg>
