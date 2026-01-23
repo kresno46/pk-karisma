@@ -138,7 +138,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="bg-cp-dark-blue p-5 w-full rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">Kirim Permintaan</button>
+            <button type="submit" class="bg-cp-dark-blue p-5 w-full rounded-xl hover:shadow-[0_12px_30px_0_#8B5A2B66] transition-all duration-300 font-bold text-white">Kirim Permintaan</button>
         </form>
     </div>
 
@@ -243,3 +243,4 @@
     <script src="{{ asset('js/carousel.js') }}"></script>
     <script src="{{ asset('js/contact-form.js') }}"></script>
 @endpush
+

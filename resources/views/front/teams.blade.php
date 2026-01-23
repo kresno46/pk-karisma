@@ -27,8 +27,8 @@
 
             <div class="teams-card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] justify-center">
                 @forelse ($teams as $team)
-                    <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
-                        <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#007AFF_8.72%,_#312ECB_87.11%)]">
+                    <div class="card bg-white flex flex-col h-full justify-center items-center p-[30px] px-[29px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:shadow-[0_10px_30px_0_#BCA18680] hover:border-cp-dark-blue transition-all duration-300">
+                        <div class="w-[100px] h-[100px] flex shrink-0 items-center justify-center rounded-full bg-[linear-gradient(150.55deg,_#C89B6A_8.72%,_#8B5A2B_87.11%)]">
                             <div class="w-[90px] h-[90px] rounded-full overflow-hidden">
                                 <img src="{{ Storage::url($team->avatar) }}" class="object-cover w-full h-full object-center" alt="photo" />
                             </div>
@@ -117,3 +117,4 @@
         </div>
     </div>
 @endsection
+

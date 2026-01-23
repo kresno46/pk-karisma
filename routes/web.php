@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CompanyAboutController;
 use App\Http\Controllers\CompanyStatisticController;
@@ -33,6 +35,22 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::prefix('admin')->name('admin.')->group(function () {
+        // Kelola Pengguna
+        Route::middleware('can: Kelola Pengguna')->group(function () {
+            Route::get('users', [AdminUserController::class, 'index'])->name('users.index');
+            Route::get('users/create', [AdminUserController::class, 'create'])->name('users.create');
+            Route::post('users', [AdminUserController::class, 'store'])->name('users.store');
+            Route::get('users/{user}/edit', [AdminUserController::class, 'edit'])->name('users.edit');
+            Route::put('users/{user}', [AdminUserController::class, 'update'])->name('users.update');
+            Route::delete('users/{user}', [AdminUserController::class, 'destroy'])->name('users.destroy');
+        });
+
+        // Data Absensi
+        Route::middleware('role:super_admin')->group(function () {
+            Route::get('attendances', [AttendanceController::class, 'index'])->name('attendances.index');
+            Route::get('attendances/pdf', [AttendanceController::class, 'exportPdf'])->name('attendances.pdf');
+        });
+
         // Kelola Statistik
         Route::middleware('can: Kelola Statistik')->group(function () {
             Route::resource('statistics', CompanyStatisticController::class);
@@ -77,6 +95,12 @@ Route::middleware('auth')->group(function () {
         Route::middleware('can: Kelola Bagian Hero')->group(function () {
             Route::resource('hero-sections', HeroSectionController::class);
         });
+    });
+
+    // Absensi untuk user
+    Route::middleware('role:user')->group(function () {
+        Route::get('/attendance', [AttendanceController::class, 'create'])->name('attendance.create');
+        Route::post('/attendance', [AttendanceController::class, 'store'])->name('attendance.store');
     });
 });
 

@@ -28,6 +28,8 @@ class RolePermissionSeeder extends Seeder
             'Kelola Tentang',
             'Kelola Janji Temu',
             'Kelola Bagian Hero',
+            'Kelola Pengguna',
+            'Kelola Absensi',
         ];
 
         foreach($permissions as $permission) {
@@ -74,5 +76,11 @@ class RolePermissionSeeder extends Seeder
         );
 
         $designManagerRole->syncPermissions($designManagerPermissions);
+
+        Role::firstOrCreate(
+            [
+                'name' => 'user'
+            ]
+        );
     }
 }

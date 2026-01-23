@@ -25,7 +25,7 @@
     <div class="container max-w-[1130px] mx-auto mt-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             @forelse ($blogs as $blog)
-                <a href="{{ route('front.blog-detail', $blog->slug) }}" class="card bg-white flex flex-col h-full rounded-[20px] border border-[#E8EAF2] overflow-hidden hover:shadow-[0_10px_30px_0_#D1D4DF80] hover:border-cp-dark-blue transition-all duration-300">
+                <a href="{{ route('front.blog-detail', $blog->slug) }}" class="card bg-white flex flex-col h-full rounded-[20px] border border-[#E8EAF2] overflow-hidden hover:shadow-[0_10px_30px_0_#BCA18680] hover:border-cp-dark-blue transition-all duration-300">
                     <div class="w-full h-[220px] bg-[#D9D9D9] overflow-hidden">
                         @if(!empty($blog->image))
                             <img src="{{ Storage::url($blog->image) }}" class="w-full h-full object-cover object-center" alt="{{ $blog->title }}" />
@@ -57,3 +57,4 @@
         </div>
     </div>
 @endsection
+

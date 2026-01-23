@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>@yield('title', 'Beranda') - {{ config('app.name') }}</title>
+        <link rel="icon" href="{{ asset('assets/logo/logo.svg') }}" type="image/svg+xml" />
         <meta name="description" content="@yield('meta_description', '')" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
