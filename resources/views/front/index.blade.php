@@ -9,7 +9,7 @@
             @include('front.layouts.navbar')
             <!-- End Navbar -->
             @if($hero)
-            <div id="Hero" class="flex flex-col gap-[30px] mt-20 pb-20">
+            <div id="Hero" class="reveal flex flex-col gap-[30px] mt-20 pb-20">
                 <div class="flex items-center bg-white p-[8px_16px] gap-[10px] rounded-full w-fit">
                     <div class="w-5 h-5 flex shrink-0 overflow-hidden">
                         <img src="{{ asset('assets/icons/crown.svg') }}" class="object-contain" alt="icon" />
@@ -35,13 +35,13 @@
             @endif
         </div>
         @if($hero)
-        <div class="absolute w-full h-full top-0 right-0 overflow-hidden z-0">
+        <div class="absolute h-full top-0 right-0 overflow-hidden z-0" style="width:50%;">
             <img src="{{ Storage::url($hero->banner) }}" class="object-cover w-full h-full" alt="banner" />
         </div>
         @endif
     </div>
     <!-- Client -->
-    <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
+    <div id="Clients" class="reveal container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
         <h2 class="font-bold text-lg">Dipercaya oleh 500+ Mitra Industri Kayu dan Konstruksi</h2>
         <div class="logo-container flex flex-wrap gap-5 justify-center">
             <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
@@ -92,7 +92,7 @@
         </div>
     </div>
     <!-- Principles -->
-    <div id="OurPrinciples" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
+    <div id="OurPrinciples" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
                 <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">PRINSIP KAMI</p>
@@ -126,7 +126,7 @@
         </div>
     </div>
     <!-- Stats -->
-    <div id="Stats" class="bg-cp-black w-full mt-20">
+    <div id="Stats" class="reveal bg-cp-black w-full mt-20">
         <div class="container max-w-[1000px] mx-auto py-10">
             <div class="flex flex-wrap items-center justify-between p-[10px]">
                 @forelse ($statistics as $statistic)    
@@ -144,7 +144,7 @@
         </div>
     </div>
     <!-- Product -->
-    <div id="Products" class="container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
+    <div id="Products" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
         @forelse ($products as $product)    
             <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
                 <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
@@ -164,7 +164,7 @@
         @endforelse
     </div>
     <!-- Teams -->
-    <div id="Teams" class="bg-[#F6F7FA] w-full py-20 px-[10px] mt-20">
+    <div id="Teams" class="reveal bg-[#F6F7FA] w-full py-20 px-[10px] mt-20">
         <div class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] items-center">
             <div class="flex flex-col gap-[14px] items-center">
                 <p class="badge w-fit bg-cp-light-blue text-white p-[8px_16px] rounded-full uppercase font-bold text-sm">TIM KAMI YANG HEBAT</p>
@@ -210,7 +210,7 @@
         </div>
     </div>
     <!-- Testimonials -->
-    <div id="Testimonials" class="w-full flex flex-col gap-[50px] items-center mt-20">
+    <div id="Testimonials" class="reveal w-full flex flex-col gap-[50px] items-center mt-20">
         <div class="flex flex-col gap-[14px] items-center">
             <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">KLIEN SUKSES</p>
             <h2 class="font-bold text-4xl leading-[45px] text-center">Klien Kami yang Puas<br />Dari Proyek Kayu di Berbagai Wilayah</h2>
@@ -270,7 +270,7 @@
         </div>
     </div>
     <!-- Award -->
-    <div id="Awards" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
+    <div id="Awards" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
                 <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">PENGHARGAAN KAMI</p>
@@ -318,7 +318,7 @@
         </div>
     </div>
     <!-- FAQ -->
-    <div id="FAQ" class="bg-[#F6F7FA] w-full py-20 px-[10px] mt-20 -mb-20">
+    <div id="FAQ" class="reveal bg-[#F6F7FA] w-full py-20 px-[10px] mt-20 -mb-20">
         <div class="container max-w-[1000px] mx-auto">
             <div class="flex flex-col lg:flex-row gap-[50px] sm:gap-[70px] items-center">
                 <div class="flex flex-col gap-[30px]">
@@ -415,4 +415,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="{{ asset('js/modal-video.js') }}"></script>
 @endpush
-

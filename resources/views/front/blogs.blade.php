@@ -8,7 +8,8 @@
             <!-- Navbar -->
             @include('front.layouts.navbar')
             <!-- End Navbar -->
-            <div class="flex flex-col gap-[50px] items-center py-20">
+            <div class="reveal flex flex-col gap-[50px] items-center py-20" style="position:relative; z-index:0;">
+                @include('front.layouts.header-logo-block')
                 <div class="breadcrumb flex items-center justify-center gap-[30px]">
                     <p class="text-cp-light-grey last-of-type:text-cp-black last-of-type:font-semibold">Beranda</p>
                     <span class="text-cp-light-grey">/</span>
@@ -22,7 +23,7 @@
         </div>
     </div>
 
-    <div class="container max-w-[1130px] mx-auto mt-20">
+    <div class="reveal container max-w-[1130px] mx-auto mt-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             @forelse ($blogs as $blog)
                 <a href="{{ route('front.blog-detail', $blog->slug) }}" class="card bg-white flex flex-col h-full rounded-[20px] border border-[#E8EAF2] overflow-hidden hover:shadow-[0_10px_30px_0_#BCA18680] hover:border-cp-dark-blue transition-all duration-300">
@@ -57,4 +58,3 @@
         </div>
     </div>
 @endsection
-

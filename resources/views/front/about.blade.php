@@ -8,7 +8,8 @@
             <!-- Navbar -->
             @include('front.layouts.navbar')
             <!-- End Navbar -->
-            <div class="flex flex-col gap-[50px] items-center py-20">
+            <div class="reveal flex flex-col gap-[50px] items-center py-20" style="position:relative; z-index:0;">
+                @include('front.layouts.header-logo-block')
                 <div class="breadcrumb flex items-center justify-center gap-[30px]">
                     <p class="text-cp-light-grey last-of-type:text-cp-black last-of-type:font-semibold">Beranda</p>
                     <span class="text-cp-light-grey">/</span>
@@ -22,7 +23,7 @@
         </div>
     </div>
 
-    <div id="Tentang" class="container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
+    <div id="Tentang" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-20 mt-20">
         @forelse ($abouts as $about)
             <div class="product flex flex-wrap justify-center items-center gap-[60px] even:flex-row-reverse">
                 <div class="w-[470px] h-[550px] flex shrink-0 overflow-hidden">
@@ -50,7 +51,7 @@
         @endforelse
     </div>
 
-    <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
+    <div id="Clients" class="reveal container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
         <h2 class="font-bold text-lg">Dipercaya oleh Mitra Industri</h2>
         <div class="logo-container flex flex-wrap gap-5 justify-center">
             <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
@@ -81,7 +82,7 @@
         </div>
     </div>
 
-    <div id="Stats" class="bg-cp-black w-full mt-20 relative z-1-">
+    <div id="Stats" class="reveal bg-cp-black w-full mt-20 relative z-1-">
         <div class="container max-w-[1000px] mx-auto py-10">
             <div class="flex flex-wrap items-center justify-between p-[10px]">
                 @forelse ($statistics as $statistic)
@@ -99,7 +100,7 @@
         </div>
     </div>
 
-    <div id="Certifications" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
+    <div id="Certifications" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
                 <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">SERTIFIKASI</p>

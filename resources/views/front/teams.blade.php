@@ -11,9 +11,10 @@
         </div>
     </div>
 
-    <div id="Teams" class="w-full px-[10px] relative z-10">
+    <div id="Teams" class="reveal w-full px-[10px] relative z-10">
         <div class="container max-w-[1130px] mx-auto flex flex-col gap-[50px] items-center">
-            <div class="flex flex-col gap-[50px] items-center">
+            <div class="flex flex-col gap-[50px] items-center" style="position:relative; z-index:0;">
+                @include('front.layouts.header-logo-block')
                 <div class="breadcrumb flex items-center justify-center gap-[30px]">
                     <p class="text-cp-light-grey last-of-type:text-cp-black last-of-type:font-semibold">Beranda</p>
                     <span class="text-cp-light-grey">/</span>
@@ -51,7 +52,7 @@
         </div>
     </div>
 
-    <div id="Stats" class="bg-cp-black w-full mt-20 relative z-1-">
+    <div id="Stats" class="reveal bg-cp-black w-full mt-20 relative z-1-">
         <div class="container max-w-[1000px] mx-auto py-10">
             <div class="flex flex-wrap items-center justify-between p-[10px]">
                 @forelse ($statistics as $statistic)
@@ -69,7 +70,7 @@
         </div>
     </div>
 
-    <div id="Values" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
+    <div id="Values" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
                 <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">NILAI</p>
@@ -117,4 +118,3 @@
         </div>
     </div>
 @endsection
-

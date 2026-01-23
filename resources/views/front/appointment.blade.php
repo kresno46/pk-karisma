@@ -11,8 +11,9 @@
         </div>
     </div>
 
-    <div id="Contact" class="container max-w-[1130px] mx-auto flex flex-wrap xl:flex-nowrap justify-between gap-[50px] relative z-10">
-        <div class="flex flex-col mt-20 gap-[50px]">
+    <div id="Contact" class="reveal container max-w-[1130px] mx-auto flex flex-wrap xl:flex-nowrap justify-between gap-[50px] relative z-10">
+        <div class="flex flex-col mt-20 gap-[50px]" style="position:relative; z-index:0;">
+            @include('front.layouts.header-logo-block')
             <div class="breadcrumb flex items-center gap-[30px]">
                 <p class="text-cp-light-grey last-of-type:text-cp-black last-of-type:font-semibold">Beranda</p>
                 <span class="text-cp-light-grey">/</span>
@@ -57,7 +58,7 @@
             </div>
         </div>
 
-        <form action="{{ route('front.appointment.store') }}" method="POST" class="flex flex-col p-[30px] rounded-[20px] gap-[18px] bg-white shadow-[0_10px_30px_0_#D1D4DF40] w-full md:w-[700px] shrink-0">
+        <form action="{{ route('front.appointment.store') }}" method="POST" class="reveal reveal-delay-1 flex flex-col p-[30px] rounded-[20px] gap-[18px] bg-white shadow-[0_10px_30px_0_#D1D4DF40] w-full md:w-[700px] shrink-0">
             @csrf
             <div class="flex items-center gap-[18px]">
                 <div class="flex flex-col gap-2 flex w-full">
@@ -118,12 +119,12 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 flex w-full">
-                    <p class="font-semibold">Budget Perkiraan</p>
+                    <p class="font-semibold">Budget Perkiraan (Rp)</p>
                     <div class="flex items-center gap-[10px] p-[14px_20px] border border-[#E8EAF2] focus-within:border-cp-dark-blue transition-all duration-300 rounded-xl bg-white">
                         <div class="w-[18px] h-[18px] flex shrink-0">
-                            <img src="{{ asset('assets/icons/dollar-square.svg') }}" alt="icon" />
+                            <span class="text-[11px] font-bold text-cp-dark-blue">Rp</span>
                         </div>
-                        <input type="number" name="budget" class="appearance-none outline-none bg-white placeholder:font-normal placeholder:text-cp-black font-semibold w-full" placeholder="Masukkan kisaran budget" required />
+                        <input type="number" name="budget" class="appearance-none outline-none bg-white placeholder:font-normal placeholder:text-cp-black font-semibold w-full" placeholder="Masukkan kisaran budget (Rp)" required />
                     </div>
                 </div>
             </div>
@@ -142,7 +143,7 @@
         </form>
     </div>
 
-    <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20 relative z-10">
+    <div id="Clients" class="reveal container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20 relative z-10">
         <h2 class="font-bold text-lg">Dipercaya oleh Mitra Industri</h2>
         <div class="logo-container flex flex-wrap gap-5 justify-center">
             <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
@@ -173,7 +174,7 @@
         </div>
     </div>
 
-    <div id="Testimonials" class="w-full flex flex-col gap-[50px] items-center mt-20">
+    <div id="Testimonials" class="reveal w-full flex flex-col gap-[50px] items-center mt-20">
         <div class="flex flex-col gap-[14px] items-center">
             <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">TESTIMONI</p>
             <h2 class="font-bold text-4xl leading-[45px] text-center">Cerita Pelanggan<br />Dari Berbagai Industri</h2>
@@ -243,4 +244,3 @@
     <script src="{{ asset('js/carousel.js') }}"></script>
     <script src="{{ asset('js/contact-form.js') }}"></script>
 @endpush
-

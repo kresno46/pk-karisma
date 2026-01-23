@@ -9,7 +9,8 @@
             <!-- Navbar -->
             @include('front.layouts.navbar')
             <!-- End Navbar -->
-            <div class="flex flex-col gap-[50px] items-center py-20">
+            <div class="reveal flex flex-col gap-[50px] items-center py-20" style="position:relative; z-index:0;">
+                @include('front.layouts.header-logo-block')
                 <div class="breadcrumb flex items-center justify-center gap-[30px]">
                     <p class="text-cp-light-grey last-of-type:text-cp-black last-of-type:font-semibold">Beranda</p>
                     <span class="text-cp-light-grey">/</span>
@@ -25,7 +26,7 @@
         </div>
     </div>
 
-    <div class="container max-w-[1130px] mx-auto mt-20">
+    <div class="reveal container max-w-[1130px] mx-auto mt-20">
         <div class="bg-white rounded-[20px] border border-[#E8EAF2] overflow-hidden">
             @if(!empty($blog->image))
                 <div class="w-full h-[320px] bg-[#D9D9D9] overflow-hidden">

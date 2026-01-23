@@ -73,7 +73,20 @@
 
                 <hr class="my-5">
 
-                <a href="#" class="text-center font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
+                @php
+                    $rawPhone = preg_replace('/\D+/', '', $appointment->phone_number ?? '');
+                    if (str_starts_with($rawPhone, '0')) {
+                        $rawPhone = '62'.substr($rawPhone, 1);
+                    }
+                    $waMessage = urlencode('Halo '.$appointment->name.', kami dari PK-Karisma. Menindaklanjuti permintaan produk '.$appointment->product->name.'.');
+                    $waLink = $rawPhone ? "https://wa.me/{$rawPhone}?text={$waMessage}" : '#';
+                @endphp
+                <a
+                    href="{{ $waLink }}"
+                    class="text-center font-bold py-4 px-6 bg-indigo-700 text-white rounded-full"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Tindak Lanjut Pelanggan
                 </a>
 
