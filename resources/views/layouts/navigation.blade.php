@@ -98,7 +98,7 @@
                 </div>
             @endcanany
 
-            @canany(['Kelola Tim', 'Kelola Produk', 'Kelola Testimoni', 'Kelola Klien', 'Kelola Tentang', 'Kelola Janji Temu'])
+            @canany(['Kelola Tim', 'Kelola Produk', 'Kelola Testimoni', 'Kelola Klien', 'Kelola Blog', 'Kelola Tentang', 'Kelola Janji Temu'])
                 <button type="button" class="flex w-full items-center justify-between pt-4 text-xs font-semibold uppercase tracking-wide text-gray-400" @click="sections.content = !sections.content">
                     <span>Konten</span>
                     <span x-text="sections.content ? '–' : '+'"></span>
@@ -134,6 +134,14 @@
                             class="flex items-center gap-3 rounded-lg border px-3 py-2 text-sm font-medium {{ request()->routeIs('admin.clients.*') ? 'border-amber-200 bg-amber-50 text-amber-900' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900' }}"
                         >
                             {{ __('Klien Kami') }}
+                        </a>
+                    @endcan
+                    @can('Kelola Blog')
+                        <a
+                            href="{{ route('admin.blogs.index') }}"
+                            class="flex items-center gap-3 rounded-lg border px-3 py-2 text-sm font-medium {{ request()->routeIs('admin.blogs.*') ? 'border-amber-200 bg-amber-50 text-amber-900' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900' }}"
+                        >
+                            {{ __('Blog') }}
                         </a>
                     @endcan
                     @can('Kelola Tentang')

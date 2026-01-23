@@ -76,6 +76,11 @@ Route::middleware('auth')->group(function () {
             Route::resource('clients', ProjectClientController::class);
         });
 
+        // Kelola Blog
+        Route::middleware('can: Kelola Blog')->group(function () {
+            Route::resource('blogs', BlogController::class);
+        });
+
         // Kelola Tim
         Route::middleware('can: Kelola Tim')->group(function () {
             Route::resource('teams', OurTeamController::class);

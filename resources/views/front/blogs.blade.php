@@ -27,12 +27,14 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             @forelse ($blogs as $blog)
                 <a href="{{ route('front.blog-detail', $blog->slug) }}" class="card bg-white flex flex-col h-full rounded-[20px] border border-[#E8EAF2] overflow-hidden hover:shadow-[0_10px_30px_0_#BCA18680] hover:border-cp-dark-blue transition-all duration-300">
-                    <div class="w-full h-[220px] bg-[#D9D9D9] overflow-hidden">
+                    <div class="w-full h-[220px] bg-[#D9D9D9] overflow-hidden border-b border-[#E8EAF2]">
                         @if(!empty($blog->image))
                             <img src="{{ Storage::url($blog->image) }}" class="w-full h-full object-cover object-center" alt="{{ $blog->title }}" />
+                        @else
+                            <div class="h-full w-full bg-[linear-gradient(135deg,_#F6F7FA_0%,_#EDE7DD_100%)]"></div>
                         @endif
                     </div>
-                    <div class="p-[20px] flex flex-col gap-3">
+                    <div class="p-[30px] pt-[32px] pb-[32px] flex flex-1 flex-col gap-6 bg-white">
                         <div class="flex items-center justify-between gap-3">
                             @if($blog->published_at)
                                 <p class="text-sm text-cp-light-grey">{{ $blog->published_at->format('d/m/Y') }}</p>
@@ -41,11 +43,11 @@
                             @endif
                             <p class="text-sm text-cp-light-grey">Blog</p>
                         </div>
-                        <p class="font-bold text-lg leading-[27px] text-cp-black">{{ $blog->title }}</p>
+                        <p class="font-bold text-lg leading-[28px] text-cp-black">{{ $blog->title }}</p>
                         <p class="text-cp-light-grey leading-[26px]">
                             {{ \Illuminate\Support\Str::limit(strip_tags($blog->content ?? ''), 120) }}
                         </p>
-                        <div class="mt-2 font-semibold text-cp-dark-blue">Baca Selengkapnya</div>
+                        <div class="mt-auto font-semibold text-cp-dark-blue">Baca Selengkapnya</div>
                     </div>
                 </a>
             @empty

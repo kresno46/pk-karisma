@@ -24,6 +24,7 @@ class RolePermissionSeeder extends Seeder
             'Kelola Prinsip',
             'Kelola Testimoni',
             'Kelola Klien',
+            'Kelola Blog',
             'Kelola Tim',
             'Kelola Tentang',
             'Kelola Janji Temu',
