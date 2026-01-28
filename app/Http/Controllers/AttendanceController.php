@@ -82,4 +82,37 @@ class AttendanceController extends Controller
 
         return $pdf->download('data-absensi.pdf');
     }
+
+    public function exportExcel()
+    {
+        $attendances = Attendance::with('user')
+            ->orderByDesc('work_date')
+            ->orderByDesc('id')
+            ->get();
+
+        $filename = 'data-absensi.csv';
+
+        return response()->streamDownload(function () use ($attendances) {
+            $output = fopen('php://output', 'w');
+
+            // UTF-8 BOM for Excel compatibility
+            fwrite($output, "\xEF\xBB\xBF");
+
+            fputcsv($output, ['Nama', 'Email', 'Tanggal', 'Masuk', 'Pulang']);
+
+            foreach ($attendances as $attendance) {
+                fputcsv($output, [
+                    $attendance->user->name,
+                    $attendance->user->email,
+                    $attendance->work_date->format('d/m/Y'),
+                    $attendance->check_in_at?->timezone(config('app.timezone'))->format('H:i') ?? '-',
+                    $attendance->check_out_at?->timezone(config('app.timezone'))->format('H:i') ?? '-',
+                ]);
+            }
+
+            fclose($output);
+        }, $filename, [
+            'Content-Type' => 'text/csv; charset=UTF-8',
+        ]);
+    }
 }

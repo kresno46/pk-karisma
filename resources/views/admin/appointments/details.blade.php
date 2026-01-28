@@ -11,7 +11,7 @@
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-10 flex flex-col gap-y-5">
 
-                <div class="item-card flex flex-row justify-between items-center">
+                <div class="item-card grid grid-cols-1 md:grid-cols-[1fr_180px_220px] items-center gap-4">
                     <div class="flex flex-row items-center gap-x-3">
                         <img src="{{ Storage::url($appointment->product->thumbnail) }}" alt="" class="rounded-2xl object-cover w-[120px] h-[90px]">
                         <div class="flex flex-col">
@@ -57,7 +57,7 @@
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Anggaran</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                ${{ number_format($appointment->budget, 0, ',', '.') }}
+                                Rp {{ number_format($appointment->budget, 0, ',', '.') }}
                             </h3>
                         </div>
         
@@ -94,3 +94,4 @@
         </div>
     </div>
 </x-app-layout>
+

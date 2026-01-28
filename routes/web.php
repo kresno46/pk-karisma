@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function () {
         Route::middleware('role:super_admin')->group(function () {
             Route::get('attendances', [AttendanceController::class, 'index'])->name('attendances.index');
             Route::get('attendances/pdf', [AttendanceController::class, 'exportPdf'])->name('attendances.pdf');
+            Route::get('attendances/excel', [AttendanceController::class, 'exportExcel'])->name('attendances.excel');
         });
 
         // Kelola Statistik

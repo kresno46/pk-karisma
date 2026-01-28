@@ -29,7 +29,22 @@
                     <div class="w-6 h-6 flex shrink-0">
                         <img src="{{ asset('assets/icons/global.svg') }}" alt="icon" />
                     </div>
-                    <p class="text-cp-dark-blue font-semibold">{{ config('company.address') }}</p>
+                    <p class="text-cp-dark-blue font-semibold">PT. Karisma Gazebo Rakyat</p>
+                </div>
+                <p class="text-cp-light-grey leading-[28px]">
+                    Klik peta untuk navigasi langsung ke lokasi kami.
+                </p>
+                <div class="w-full overflow-hidden rounded-[16px] border border-[#E8EAF2] bg-white">
+                    <iframe
+                        title="Peta Lokasi PT. Karisma Gazebo Rakyat"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1938779499424!2d106.79742417586964!3d-6.368950762304182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eff4cbcbf789%3A0xe8859f60dc73e008!2sPT.Karisma%20Gazebo%20Rakyat!5e0!3m2!1sen!2sid!4v1769610807192!5m2!1sen!2sid"
+                        width="100%"
+                        height="220"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
                 </div>
                 @if(config('company.phone'))
                     <div class="flex items-center gap-[10px]">

@@ -1,12 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row justify-between items-center gap-3">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Data Absensi') }}
             </h2>
-            <a href="{{ route('admin.attendances.pdf') }}" class="font-bold py-3 px-5 bg-indigo-700 text-white rounded-full">
-                Download PDF
-            </a>
+            <div class="flex items-center gap-2">
+                <a href="{{ route('admin.attendances.excel') }}" class="font-bold py-3 px-5 bg-emerald-600 text-white rounded-full">
+                    Download Excel
+                </a>
+                <a href="{{ route('admin.attendances.pdf') }}" class="font-bold py-3 px-5 bg-indigo-700 text-white rounded-full">
+                    Download PDF
+                </a>
+            </div>
         </div>
     </x-slot>
 

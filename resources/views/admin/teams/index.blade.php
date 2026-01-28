@@ -15,22 +15,22 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-10 flex flex-col gap-y-5">
 
                 @forelse ($teams as $team)
-                    <div class="item-card flex flex-row justify-between items-center">
+                    <div class="item-card grid grid-cols-1 md:grid-cols-[1fr_180px_180px_220px] items-center gap-4">
                         <div class="flex flex-row items-center gap-x-3">
                             <img src="{{ Storage::url($team->avatar) }}" alt="" class="rounded-2xl object-cover w-[90px] h-[90px]">
                             <div class="flex flex-col">
                                 <h3 class="text-indigo-950 text-xl font-bold">{{ $team->name }}</h3>
                             </div>
                         </div> 
-                        <div  class="hidden md:flex flex-col">
+                        <div class="hidden md:flex flex-col md:justify-self-center">
                             <p class="text-slate-500 text-sm">Lokasi</p>
                             <h3 class="text-indigo-950 text-xl font-bold">{{ $team->location }}</h3>
                         </div>
-                        <div  class="hidden md:flex flex-col">
+                        <div class="hidden md:flex flex-col md:justify-self-center">
                             <p class="text-slate-500 text-sm">Tanggal</p>
                             <h3 class="text-indigo-950 text-xl font-bold">{{ $team->created_at->format('d/m/Y') }}</h3>
                         </div>
-                        <div class="hidden md:flex flex-row items-center gap-x-3">
+                        <div class="hidden md:flex flex-row items-center gap-x-3 md:justify-self-end">
                             <a href="{{ route('admin.teams.edit', $team) }}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                                 Ubah
                             </a>
@@ -50,3 +50,4 @@
         </div>
     </div>
 </x-app-layout>
+

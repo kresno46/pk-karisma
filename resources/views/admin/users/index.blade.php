@@ -26,18 +26,18 @@
                 @endif
 
                 @forelse ($users as $user)
-                    <div class="item-card flex flex-row justify-between items-center">
+                    <div class="item-card grid grid-cols-1 md:grid-cols-[1fr_180px_220px] items-center gap-4">
                         <div class="flex flex-col">
                             <h3 class="text-indigo-950 text-xl font-bold">{{ $user->name }}</h3>
                             <p class="text-slate-500 text-sm">{{ $user->email }}</p>
                         </div>
-                        <div class="hidden md:flex flex-col">
+                        <div class="hidden md:flex flex-col md:justify-self-center">
                             <p class="text-slate-500 text-sm">Role</p>
                             <p class="text-indigo-950 text-base font-semibold">
                                 {{ $user->roles->pluck('name')->join(', ') ?: '—' }}
                             </p>
                         </div>
-                        <div class="hidden md:flex items-center gap-3">
+                        <div class="hidden md:flex items-center gap-3 md:justify-self-end">
                             <a href="{{ route('admin.users.edit', $user) }}" class="font-bold py-3 px-5 bg-indigo-700 text-white rounded-full">
                                 Edit
                             </a>
@@ -82,3 +82,5 @@
         </div>
     </div>
 </x-app-layout>
+
+
