@@ -100,7 +100,7 @@
         </div>
     </div>
 
-    <div id="Certifications" class="reveal container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-20">
+    <div id="Certifications" class="reveal container max-w-[1130px] mx-auto hidden flex-col gap-[30px] mt-20">
         <div class="flex items-center justify-between">
             <div class="flex flex-col gap-[14px]">
                 <p class="badge w-fit bg-cp-pale-blue text-cp-light-blue p-[8px_16px] rounded-full uppercase font-bold text-sm">SERTIFIKASI</p>
