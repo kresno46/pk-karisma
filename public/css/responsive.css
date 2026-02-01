@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 1024px) {
+    .w-\[700px\],
+    .w-\[603px\],
+    .w-\[565px\],
+    .w-\[470px\],
+    .w-\[356\.67px\] {
+        width: 100% !important;
+    }
+
+    .max-w-\[700px\],
+    .max-w-\[680px\],
+    .max-w-\[536px\],
+    .max-w-\[500px\],
+    .max-w-\[437px\] {
+        max-width: 100% !important;
+    }
+
+    .h-\[700px\],
+    .h-\[600px\],
+    .h-\[550px\] {
+        height: auto !important;
+    }
+
+    .\-mb-\[488px\],
+    .\-mb-\[388px\] {
+        margin-bottom: 0 !important;
+    }
+
+    #header > .absolute {
+        position: static !important;
+        width: 100% !important;
+        height: 240px !important;
+    }
+
+    .testimonial-container {
+        gap: 32px !important;
+    }
+
+    .carousel-card {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .footer-wordmark {
+        font-size: 96px !important;
+        line-height: 120px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-wordmark {
+        font-size: 64px !important;
+        line-height: 80px !important;
+    }
+
+    .navbar-root {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .navbar-root ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .navbar-root > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .w-\[200px\] {
+        width: 100% !important;
+    }
+
+    .h-\[320px\],
+    .h-\[220px\] {
+        height: auto !important;
+    }
+
+    #Hero h1 {
+        font-size: 32px !important;
+        line-height: 40px !important;
+    }
+
+    #Hero p {
+        line-height: 26px !important;
+    }
+
+    .header-logo-icon {
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .header-logo-title {
+        font-size: 48px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .header-logo-subtitle {
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+    }
+}

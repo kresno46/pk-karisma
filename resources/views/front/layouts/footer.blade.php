@@ -58,6 +58,6 @@
         </div>
     </div>
     <div class="absolute -bottom-[135px] w-full">
-        <p class="font-extrabold text-[250px] leading-[375px] text-center text-white opacity-5">PK KARISMA</p>
+        <p class="footer-wordmark font-extrabold text-[250px] leading-[375px] text-center text-white opacity-5">PK KARISMA</p>
     </div>
 </footer>

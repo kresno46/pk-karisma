@@ -1,4 +1,4 @@
-<nav class="flex flex-wrap items-center justify-between bg-white p-[20px_30px] rounded-[20px] gap-y-3">
+<nav class="navbar-root flex flex-wrap items-center justify-between bg-white p-[20px_30px] rounded-[20px] gap-y-3">
     <div class="flex items-center gap-1">
         <div class="flex shrink-0 h-[52px] w-[52px] overflow-hidden">
             <x-application-logo class="object-contain w-full h-full" />
@@ -27,4 +27,3 @@
     </ul>
     <a href="{{ route('front.appointment') }}" class="bg-cp-dark-blue p-[14px_20px] w-fit rounded-xl hover:shadow-[0_12px_30px_0_#8B5A2B66] transition-all duration-300 font-bold text-white">Minta Penawaran</a>
 </nav>
-
