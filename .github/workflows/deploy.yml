@@ -2,7 +2,7 @@ name: Deploy to Hostinger
 
 on:
   push:
-    branches: [ main ] # ganti 'main' kalau branch default saya beda
+    branches: [ master ] # ganti 'main' kalau branch default saya beda
 
 jobs:
   deploy:
