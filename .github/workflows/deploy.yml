@@ -28,17 +28,18 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install JS dependencies and build
-        run: |
-          npm install
-          npm run build
+      - name: Install deps
+        run: npm install
 
-      - name: Sync files to Hostinger via rsync
-        uses: burnett01/rsync-deployments@5.2
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Hostinger
+        uses: burnett01/rsync-deployments@v7
         with:
-          switches: -avz --delete --exclude=".git" --exclude="node_modules" --exclude="tests"
-          path: ./
-          remote_path: public_html/
+          switches: -avz --delete
+          path: build/ # atau sesuai folder hasil build di repo
+          remote_path: public_html/build/
           remote_host: ${{ secrets.SSH_HOST }}
           remote_user: ${{ secrets.SSH_USER }}
           remote_key: ${{ secrets.SSH_KEY }}
