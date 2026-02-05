@@ -2,7 +2,7 @@ name: Deploy to Hostinger
 
 on:
   push:
-    branches: [ master ] # ganti 'main' kalau branch default saya bed
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -34,15 +34,15 @@ jobs:
           npm run build
 
       - name: Sync files to Hostinger via rsync
-        uses: easingthemes/ssh-deploy@v5.1.0
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          REMOTE_PORT: ${{ secrets.SSH_PORT }}
-          SOURCE: ./
-          TARGET: public_html/
-          ARGS: "-avz --delete --exclude='.git' --exclude='node_modules' --exclude='tests'"
+        uses: burnett01/rsync-deployments@5.2
+        with:
+          switches: -avz --delete --exclude=".git" --exclude="node_modules" --exclude="tests"
+          path: ./
+          remote_path: public_html/
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_KEY }}
+          remote_port: ${{ secrets.SSH_PORT }}
 
       - name: Run Laravel optimizations on server
         uses: appleboy/ssh-action@v1.0.3
