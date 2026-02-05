@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 img,
 svg,
 video,
@@ -64,6 +68,75 @@ iframe {
         transform: none !important;
     }
 
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #Hero {
+        margin-top: 32px !important;
+        padding-bottom: 48px !important;
+    }
+
+    #Hero h1 {
+        font-size: 36px !important;
+        line-height: 44px !important;
+    }
+
+    #Hero p {
+        line-height: 26px !important;
+    }
+
+    #OurPrinciples > .flex,
+    #Awards > .flex,
+    #Values > .flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    #OurPrinciples h2,
+    #Awards h2,
+    #Testimonials h2,
+    #Teams h2,
+    #FAQ h2,
+    #Products h2 {
+        font-size: 28px !important;
+        line-height: 36px !important;
+    }
+
+    #Products .product {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .carousel-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .testimonial-container {
+        width: 100% !important;
+        gap: 24px !important;
+    }
+
+    .testimonial-container .pl-\[30px\] {
+        padding-left: 0 !important;
+    }
+
+    .breadcrumb {
+        flex-wrap: wrap;
+        gap: 12px !important;
+        justify-content: center;
+    }
+
+    #Contact form > .flex.items-center {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px !important;
+    }
+
     .footer-wordmark {
         font-size: 96px !important;
         line-height: 120px !important;
@@ -74,6 +147,17 @@ iframe {
     .footer-wordmark {
         font-size: 64px !important;
         line-height: 80px !important;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions a,
+    .hero-actions button {
+        width: 100% !important;
+        justify-content: center;
     }
 
     .navbar-root {

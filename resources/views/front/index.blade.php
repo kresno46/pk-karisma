@@ -22,7 +22,7 @@
                     </h1>
                     <p class="text-cp-light-grey leading-[30px] max-w-[437px]">{{ $hero->subheading }}</p>
                 </div>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4 hero-actions">
                     <a href="" class="bg-cp-dark-blue p-5 w-fit rounded-xl hover:shadow-[0_12px_30px_0_#8B5A2B66] transition-all duration-300 font-bold text-white">{{ __('Jelajahi Sekarang') }}</a>
                     <button class="bg-cp-black p-5 w-fit rounded-xl font-bold text-white flex items-center gap-[10px]" onclick="{modal.show()}">
                         <div class="w-6 h-6 flex shrink-0 overflow-hidden">
