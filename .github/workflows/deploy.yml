@@ -34,11 +34,11 @@ jobs:
           npm run build
 
       - name: Sync files to Hostinger via rsync
-        uses: burnett01/rsync-deployments@v7.0.1
+        uses: burnett01/rsync-deployments@5.2
         with:
           switches: -avz --delete --exclude=".git" --exclude="node_modules" --exclude="tests"
           path: ./
-          remote_path: public_html/
+          remote_path: public_html/ # atau sesuaikan dengan root di server kamu
           remote_host: ${{ secrets.SSH_HOST }}
           remote_user: ${{ secrets.SSH_USER }}
           remote_key: ${{ secrets.SSH_KEY }}
