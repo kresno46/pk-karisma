@@ -35,7 +35,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Hostinger
-        uses: burnett01/rsync-deployments@v7
+        uses: burnett01/rsync-deployments@v6
         with:
           switches: -avz --delete
           path: build/ # atau sesuai folder hasil build di repo
