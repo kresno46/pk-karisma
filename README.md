@@ -63,5 +63,5 @@ Menggunakan stack Laravel modern agar mudah dikembangkan dan dikelola lewat CMS.
 - Nginx
 - MySQL
 
-## License
+## Licensee
 This project is open-source and free to use under the [MIT license](https://opensource.org/licenses/MIT).
